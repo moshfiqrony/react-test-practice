@@ -8,7 +8,7 @@ test("LoginForm", () => {
   ReactDOM.render(<LoginForm onSubmit={handleSubmit} />, container);
 
   const form = container.querySelector("form");
-  const { username, password } = form.elements;
+  const { username, password, submit } = form.elements;
   username.value = "moshfiqrony";
   password.value = "124";
 
@@ -19,4 +19,5 @@ test("LoginForm", () => {
     username: username.value,
     password: password.value
   });
+  expect(submit.type).toBe("submit");
 });

@@ -6,7 +6,7 @@ export default function LoginForm(props) {
     const { username, password } = e.target.elements;
 
     if (password.value.trim().length < 4) {
-      new Error("Invalid Pass");
+      // throw new Error("Invalid Pass");
     }
 
     props.onSubmit({ username: username.value, password: password.value });
